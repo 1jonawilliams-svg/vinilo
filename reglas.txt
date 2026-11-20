@@ -1,0 +1,58 @@
+# Fuente: ~/Desktop/Hitster/Hitster_Reglas_Triptico_A4.pdf (texto literal, en el orden del 1 al 5).
+# Marcas: T título · S subtítulo · ## sección · ### apartado · P párrafo · K cifras · - viñeta
+#         -- subpunto · F ficha (nombre|coste|texto) · 1. paso · B recuadro · C caso (texto|resultado|ficha) · Q/A duda · N nota. **negrita**
+T Reglas de Hitster
+S Ordena canciones por año. **Gana el primero que coloca bien 15**, sin contar la carta de referencia.
+## 1|Antes de empezar
+### La meta: 15 cartas
+P Cada jugador ordena canciones por año en su propia línea de tiempo. Gana el primero que coloca bien 15, sin contar la carta de referencia.
+K 15|canciones para ganar;2|fichas al empezar;5|fichas como máximo
+### La carta de referencia
+P Es solo un año para empezar a ordenar. No marca el principio de la línea: las canciones más antiguas van antes y las más nuevas, después. No cuenta para las 15, así que al ganar tienes 16 cartas en la mesa.
+### Preparación
+- Cada jugador o equipo recibe 2 fichas y 1 carta con el año a la vista: su carta de referencia.
+- En cada turno hace de DJ alguien del equipo contrario; si juegan más de dos, el de la izquierda de quien tiene el turno. Escanea el código QR con la app y, en cuanto lo escanea, pone el teléfono boca abajo para que nadie vea la pantalla.
+- El resto del mazo queda boca abajo, con el código QR hacia arriba.
+## 2|Uso de fichas
+P Empiezas con 2 y puedes tener 5 como máximo. Ganas 1 cuando, en tu turno, aciertas título y artista y además colocas bien la carta. Sirven para cuatro cosas:
+F Robar|1 ficha|En el turno de otro, apuestas a que la colocó mal y eliges otro hueco de su línea. Se explica en el punto 4.
+F Pasar canción|1 ficha|En tu turno, antes de colocarla. Se descarta y el DJ escanea otra.
+F Carta gratis|4 fichas|Solo al empezar tu turno, antes de que el DJ escanee tu carta. Coges la carta de arriba del mazo, miras el año y la pones en su sitio. Después juegas tu turno normal. **No vale si tienes 14 cartas:** la que te da la victoria hay que acertarla.
+F Quitar carta|5 fichas|Solo al empezar tu turno, antes de que el DJ escanee. Eliges una carta (un año) de la línea de otro jugador y se la quitas: vuelve al mazo, no pasa a tu línea. **No vale sobre su carta de referencia.** Después juegas tu turno normal.
+## 3|Tu turno
+1. El DJ del equipo contrario escanea la carta de arriba del mazo, pone el teléfono boca abajo y suena la canción.
+2. Antes de colocar la carta, puedes decir el artista y el título de la canción para ganar una ficha.
+3. Coloca la carta en tu línea: antes de la primera, después de la última o entre dos cartas. Una vez colocada, ya no puedes moverla.
+4. Los demás pueden apostar una ficha a otra posición para robártela.
+5. Se da la vuelta a la carta.
+-- **Bien colocada:** te la quedas. Si además acertaste artista y título, ganas una ficha.
+-- **Mal colocada:** la carta se descarta y no hay ficha.
+B **Mismo año.** Si la canción es del mismo año que una carta que ya tienes, puedes ponerla justo antes o justo después. Las dos posiciones son correctas.
+B **Carta gratis por 4 fichas.** Si la quieres, pídela antes de que el DJ escanee. Las condiciones están en el punto 2.
+## 4|Cómo se roba
+- Con la carta ya colocada y antes de girarla, cualquiera puede gritar «¡Hitster!» y poner 1 ficha en el hueco de esa línea que cree correcto.
+- Si gritan varios, elige hueco primero quien gritó antes. Cada uno va a un hueco distinto.
+- La ficha se gasta siempre, aciertes o no.
+C El jugador del turno acertó, aunque tu hueco también sea correcto (mismo año)|Carta para él|Pierdes la ficha
+C El jugador del turno falló y tú acertaste|Carta para ti|Ficha gastada
+C El jugador del turno falló y tú también apostaste mal el año|Se descarta|Pierdes la ficha
+## 5|Fin de la partida
+P Gana quien llega primero a 15 cartas bien colocadas además de la de referencia. Cuentan todas: las de tu turno, las robadas y las que consigues con 4 fichas, salvo la excepción de las 14 cartas. En cuanto llegas a 15, la partida termina, aunque sea en el turno de otro.
+## ?|Preguntas típicas
+Q ¿Cuántas canciones hay que tener?
+A 15, sin contar la carta de referencia.
+Q Acerté título y artista, pero fallé el año. ¿Gano ficha?
+A No. La ficha solo se gana si además la carta queda bien colocada.
+Q ¿Para qué sirve la carta de referencia?
+A Para tener un año con el que comparar desde la primera canción. No va al principio: si sale una más antigua, va antes que ella.
+Q Si robo y acierto, ¿recupero la ficha?
+A No. La ficha se gasta siempre; lo que ganas es la carta.
+Q El otro falla y yo pongo la ficha, pero también me equivoco de año. ¿Qué pasa?
+A Pierdes la ficha y nadie se queda la carta: se descarta.
+Q Tengo 14 cartas y 4 fichas. ¿Puedo cambiarlas por la última carta?
+A No. La carta 15 tiene que ser una canción acertada, en tu turno o robándola.
+Q ¿Puedo pasar de canción con 1 ficha?
+A Sí, en tu turno y antes de colocar la carta. El DJ escanea otra.
+Q Puse mi ficha en otro hueco del mismo año y el otro también acertó. ¿Pierdo?
+A Sí. Si el jugador del turno acertó, la carta es suya y tu ficha se pierde, aunque tu hueco también fuera correcto.
+N Versión de casa del reglamento oficial de Hitster.

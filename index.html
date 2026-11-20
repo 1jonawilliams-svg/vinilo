@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+<meta name="theme-color" content="#000000">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-mobile-web-app-title" content="Vinilo">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon-192.png">
+<link rel="apple-touch-icon" href="icon-192.png">
+<title>Vinilo</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Pantalla principal: vinilo girando + visor de cámara abajo -->
+<main id="principal" hidden>
+  <header>
+    <span class="marca">VINILO</span>
+    <button id="btnReglas" class="borde grande">Instrucciones</button>
+    <button id="btnCompartir" class="enlace" hidden>Compartir reportes</button>
+  </header>
+
+  <div id="estado" role="status"></div>
+
+  <section id="disco">
+    <svg id="vinilo" viewBox="-100 -100 200 200" aria-hidden="true">
+      <defs>
+        <radialGradient id="sombra" r="1"><stop offset=".92" stop-color="#000" stop-opacity=".35"/><stop offset="1" stop-color="#000" stop-opacity="0"/></radialGradient>
+        <clipPath id="recorte"><circle r="33"/></clipPath>
+      </defs>
+      <circle r="99" fill="url(#sombra)"/>
+      <circle r="94" fill="#0c0c0c" stroke="#262626" stroke-width="1.2"/>
+      <g id="surcos" fill="none"></g>
+      <g id="etiqueta" class="gira">
+        <g clip-path="url(#recorte)">
+          <rect x="-33" y="-33" width="9.43" height="66" fill="#2453c8"/>
+          <rect x="-23.57" y="-33" width="9.43" height="66" fill="#b3133a"/>
+          <rect x="-14.14" y="-33" width="9.43" height="66" fill="#2453c8"/>
+          <rect x="-4.71" y="-33" width="9.43" height="66" fill="#b3133a"/>
+          <rect x="4.71" y="-33" width="9.43" height="66" fill="#2453c8"/>
+          <rect x="14.14" y="-33" width="9.43" height="66" fill="#b3133a"/>
+          <rect x="23.57" y="-33" width="9.43" height="66" fill="#2453c8"/>
+        </g>
+        <circle r="28" fill="none" stroke="#fff" stroke-opacity=".4"/>
+        <circle r="11" fill="none" stroke="#fff" stroke-opacity=".4"/>
+        <circle cy="-21" r="3" fill="#fff" fill-opacity=".9"/>
+      </g>
+    </svg>
+    <button id="btnPlay" aria-label="Pausar">
+      <svg id="icoPausa" viewBox="0 0 24 24"><rect x="6" y="4" width="4.2" height="16" rx="1"/><rect x="13.8" y="4" width="4.2" height="16" rx="1"/></svg>
+      <svg id="icoPlay" viewBox="0 0 24 24" hidden><path d="M8 4.5v15l12-7.5z"/></svg>
+    </button>
+  </section>
+
+  <div id="info" hidden></div>
+
+  <div class="fila">
+    <button id="btnInfo" class="borde">Mostrar info</button>
+    <button id="btnReportar" class="borde">Reportar tema</button>
+  </div>
+
+  <!-- El visor no saca de esta pantalla: sigue activo mientras suena el disco -->
+  <section id="visor">
+    <video id="video" playsinline muted></video>
+    <div class="mira"></div>
+    <p id="pista">Mostrale otra carta a la cámara para cambiar de tema</p>
+  </section>
+</main>
+
+<!-- Pantalla de inicio: un toque para activar cámara y audio -->
+<section id="inicio">
+  <div class="centro">
+    <span class="marca">VINILO</span>
+    <h1>Escaneá una carta<br>y que suene el disco</h1>
+    <p>Necesitás Spotify Premium con la sesión iniciada en este navegador (open.spotify.com).</p>
+    <button id="btnEmpezar" class="primario">Empezar</button>
+    <button id="btnReglas0" class="borde">Instrucciones</button>
+    <p id="errorInicio" class="error"></p>
+  </div>
+</section>
+
+<!-- Instrucciones -->
+<section id="reglas" hidden>
+  <div id="reglasLista"></div>
+  <button id="btnCerrarReglas" class="primario fijo">A jugar</button>
+</section>
+
+<!-- Reproductor de Spotify: queda fuera de la vista para no mostrar título ni portada -->
+<div id="spotifyOculto"><div id="spotifyEmbed"></div></div>
+
+<dialog id="dlgReporte">
+  <h2>Reportar este tema</h2>
+  <button class="borde grande" data-motivo="demasiado evidente">Demasiado evidente</button>
+  <button class="borde grande" data-motivo="imposible">Imposible</button>
+  <button class="enlace" data-motivo="">Cancelar</button>
+</dialog>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jsQR/1.4.0/jsQR.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,6 +1,6 @@
 // Service worker mínimo: deja la app instalable y abre rápido. Spotify y la librería de QR van siempre a la red.
-const CACHE = "vinilo-v1";
-const ARCHIVOS = ["./", "index.html", "style.css", "app.js", "cartas.json", "reglas.txt", "manifest.webmanifest", "icon-192.png", "icon-512.png"];
+const CACHE = "vinilo-v4";
+const ARCHIVOS = ["./", "index.html", "style.css", "app.js", "config.js", "cartas.json", "reglas.txt", "manifest.webmanifest", "icon-192.png", "icon-512.png"];
 
 self.addEventListener("install", (e) => {
   e.waitUntil(caches.open(CACHE).then((c) => c.addAll(ARCHIVOS)).then(() => self.skipWaiting()));

@@ -76,8 +76,41 @@
   <div class="centro">
     <span class="marca">VINILO</span>
     <h1>Escaneá una carta<br>y que suene el disco</h1>
-    <p>Necesitás Spotify Premium con la sesión iniciada en este navegador (open.spotify.com).</p>
-    <button id="btnEmpezar" class="primario">Empezar</button>
+    <p>Necesitás Spotify Premium y la app de Spotify instalada en este celular, con tu sesión iniciada.</p>
+    <div class="paso col" id="paso1">
+      <div class="fila-paso">
+        <span class="pnum">1</span>
+        <div class="ptxt"><b>Creá tu app de Spotify</b><span id="estadoApp">Una sola vez, en 2 minutos</span></div>
+        <button id="btnComoCrear" class="borde">Cómo</button>
+      </div>
+      <ol id="guiaApp" hidden>
+        <li>Abrí <a href="https://developer.spotify.com/dashboard" target="_blank" rel="noopener">developer.spotify.com/dashboard</a> e iniciá sesión con tu cuenta Premium.</li>
+        <li>Tocá <b>Create app</b>. Nombre y descripción: <b>Vinilo</b>.</li>
+        <li>En <b>Redirect URI</b> pegá esta dirección y tocá <b>Add</b>:
+          <div class="copiable"><code id="uriRedirect"></code><button id="btnCopiar" class="borde">Copiar</button></div>
+        </li>
+        <li>Marcá <b>Web API</b>, aceptá los términos y tocá <b>Save</b>.</li>
+        <li>Entrá a <b>Settings</b>, copiá el <b>Client ID</b> y pegalo acá:</li>
+      </ol>
+      <div class="entrada" id="entradaId">
+        <input id="inputClientId" type="text" inputmode="text" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="Pegá tu Client ID">
+        <button id="btnGuardarId" class="borde">Guardar</button>
+      </div>
+    </div>
+    <div class="paso">
+      <span class="pnum">2</span>
+      <div class="ptxt">
+        <b>Vinculá tu cuenta de Spotify</b>
+        <span id="cuenta">Primero completá el paso 1</span>
+      </div>
+      <button id="btnVincular" class="borde" disabled>Vincular</button>
+    </div>
+    <div class="paso">
+      <span class="pnum">3</span>
+      <div class="ptxt"><b>Empezá a jugar</b><span>Te va a pedir permiso de cámara</span></div>
+      <button id="btnEmpezar" class="primario chico" disabled>Empezar</button>
+    </div>
+    <button id="btnDesvincular" class="enlace" hidden>Desvincular mi cuenta</button>
     <button id="btnReglas0" class="borde">Instrucciones</button>
     <p id="errorInicio" class="error"></p>
   </div>
@@ -89,9 +122,6 @@
   <button id="btnCerrarReglas" class="primario fijo">A jugar</button>
 </section>
 
-<!-- Reproductor de Spotify: queda fuera de la vista para no mostrar título ni portada -->
-<div id="spotifyOculto"><div id="spotifyEmbed"></div></div>
-
 <dialog id="dlgReporte">
   <h2>Reportar este tema</h2>
   <button class="borde grande" data-motivo="demasiado evidente">Demasiado evidente</button>
@@ -100,6 +130,7 @@
 </dialog>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jsQR/1.4.0/jsQR.min.js"></script>
+<script src="config.js"></script>
 <script src="app.js"></script>
 </body>
 </html>
